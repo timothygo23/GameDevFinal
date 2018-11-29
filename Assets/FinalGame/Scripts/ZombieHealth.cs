@@ -6,9 +6,15 @@ public class ZombieHealth : MonoBehaviour
 {
     public float Health = 5;
     private Animator _animator;
+
     void Start()
     {
         _animator = GetComponent<Animator>();
+    }
+
+    public void SetHealth(float health)
+    {
+        this.Health = health;
     }
 
     public void TakeDamage(float damage)
