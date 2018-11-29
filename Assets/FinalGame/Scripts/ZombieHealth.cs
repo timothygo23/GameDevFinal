@@ -13,6 +13,7 @@ public class ZombieHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        Debug.Log("dmg");
         if (Health <= 0)
         {
             return;
