@@ -7,17 +7,23 @@ public class ZombieHealth : MonoBehaviour
     public float Health = 5;
     private Animator _animator;
     public bool isCritter = false;
+    private ParticleSystem _particle;
+
     void Start()
     {
         _animator = GetComponent<Animator>();
 
         if (Health == 1)
+        {
             isCritter = true;
+            _particle = GetComponentInChildren<ParticleSystem>();
+        }
 
     }
 
     public void TakeDamage(float damage)
     {
+       //_particle.Play();
         if (Health <= 0)
         {
             return;
@@ -41,7 +47,10 @@ public class ZombieHealth : MonoBehaviour
 
         if (isCritter)
         {
-            Destroy(gameObject);
+            _particle.Play();
+            GameObject.Destroy(transform.GetChild(1).gameObject);
+            GameObject.Destroy(transform.GetChild(2).gameObject);
+            //Destroy(gameObject);
         }
         else
         {
