@@ -44,16 +44,12 @@ public class ZombieSpawner : MonoBehaviour {
         int spawnPointIndex = Random.Range(0, spawnPoints.Count);
         int zombiePrefabIndex = Random.Range(0, zombiePrefabs.Count);
 
-        Debug.Log("SpawnPoint: " + spawnPointIndex);
-
         Transform spawnPoint = spawnPoints[spawnPointIndex];
 
         GameObject zombie = Instantiate(zombiePrefabs[zombiePrefabIndex]);
-        ZombieHealth zombieHealth = zombie.GetComponent<ZombieHealth>();
         Zombie zombieComp = zombie.GetComponent<Zombie>();
 
         zombieComp.SetTarget(player);
-        //zombieHealth.SetHealth(5); //change this nalang
         zombie.transform.position = spawnPoint.position;
     }
 

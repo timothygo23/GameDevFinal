@@ -5,15 +5,15 @@ using UnityEngine.AI;
 
 public class ZombieHealth : MonoBehaviour
 {
+    [SerializeField] private Animator _animator;
+
     public float Health = 5;
-    private Animator _animator;
     public bool isCritter = false;
+
     private ParticleSystem _particle;
 
     void Start()
     {
-        _animator = GetComponent<Animator>();
-
         if (Health == 1)
         {
             isCritter = true;
@@ -49,9 +49,8 @@ public class ZombieHealth : MonoBehaviour
         if (isCritter)
         {
             //_particle.Play();
-            //GameObject.Destroy(transform.GetChild(1).gameObject);
-            //GameObject.Destroy(transform.GetChild(2).gameObject);
-            Destroy(gameObject);
+            GameObject.Destroy(transform.GetChild(0).gameObject);
+            //Destroy(gameObject);
         }
         else
         {
@@ -60,6 +59,9 @@ public class ZombieHealth : MonoBehaviour
 
         NavMeshAgent navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.enabled = false; //this stops it from moving
+
+        Zombie zombieComp = GetComponent<Zombie>();
+        zombieComp.EndAttack();
     }
 
 }
