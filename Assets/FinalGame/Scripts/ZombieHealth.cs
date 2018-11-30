@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ZombieHealth : MonoBehaviour
 {
@@ -48,16 +49,17 @@ public class ZombieHealth : MonoBehaviour
         if (isCritter)
         {
             //_particle.Play();
-            GameObject.Destroy(transform.GetChild(1).gameObject);
-            GameObject.Destroy(transform.GetChild(2).gameObject);
-            //Destroy(gameObject);
+            //GameObject.Destroy(transform.GetChild(1).gameObject);
+            //GameObject.Destroy(transform.GetChild(2).gameObject);
+            Destroy(gameObject);
         }
         else
         {
             _animator.SetTrigger("Death");
         }
-        
-     
+
+        NavMeshAgent navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent.enabled = false; //this stops it from moving
     }
 
 }
