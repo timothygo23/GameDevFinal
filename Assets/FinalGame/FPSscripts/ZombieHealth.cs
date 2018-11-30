@@ -47,7 +47,7 @@ public class ZombieHealth : MonoBehaviour
 
         if (isCritter)
         {
-            //_particle.Play();
+            _particle.Play();
             GameObject.Destroy(transform.GetChild(1).gameObject);
             GameObject.Destroy(transform.GetChild(2).gameObject);
             //Destroy(gameObject);
