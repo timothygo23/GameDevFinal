@@ -45,9 +45,13 @@ public class PlayerHealth : MonoBehaviour {
         Debug.Log("Player health: " + health);
         health -= 1;
 
+        //red tint
         var vignette = ppp.vignette.settings;
         vignette.intensity += vignetteIncrement;
         ppp.vignette.settings = vignette;
+
+        //camera shake
+        EventBroadcaster.Instance.PostEvent(EventNames.FinalGameEvents.ON_ZOMBIE_ATTACK_SHAKE);
 
         if (health <= 0)
         {

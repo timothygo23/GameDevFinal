@@ -1400,7 +1400,7 @@ MonoBehaviour:
   player: {fileID: 0}
   agent: {fileID: 195569969949491152}
   animator: {fileID: 95581256082273332}
-  attackInterval: 2
+  attackInterval: 2.2
 --- !u!114 &114903827290672278
 MonoBehaviour:
   m_ObjectHideFlags: 1

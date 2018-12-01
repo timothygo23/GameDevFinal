@@ -7,7 +7,8 @@ public class PlayerShootingController : MonoBehaviour
     private const string SHOOTABLE_LAYER = "Zombie";
 
     [SerializeField] private ParticleSystem onHitParticle;
-    
+    [SerializeField] private AudioSource gunShotAudio;
+
     public float Range = 100;
     public float ShootingDelay = 2.0f;
     private Camera _camera;
@@ -44,8 +45,13 @@ public class PlayerShootingController : MonoBehaviour
         Ray ray = _camera.ScreenPointToRay(target);
         RaycastHit hit = new RaycastHit();
 
+        //camera shake
+        EventBroadcaster.Instance.PostEvent(EventNames.FinalGameEvents.ON_GUN_SHOT_SHAKE);
+
+        gunShotAudio.Play();
+
         if (Physics.Raycast(ray, out hit, Range, _shootableMask))
-        {        
+        {
             print("hit " + hit.collider.gameObject);
 
             onHitParticle.Stop();

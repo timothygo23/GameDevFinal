@@ -2645,7 +2645,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.853
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2731,7 +2731,7 @@ MonoBehaviour:
   player: {fileID: 0}
   agent: {fileID: 195839040981562276}
   animator: {fileID: 95796352464818178}
-  attackInterval: 2
+  attackInterval: 2.2
 --- !u!137 &137209438174095842
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
