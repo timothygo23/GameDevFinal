@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 4351463724458316}
   - component: {fileID: 198585568488515650}
   - component: {fileID: 199727983810280178}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,8 +297,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1008160052570970}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.023191053, y: 0.5839536, z: -0.016692676, w: -0.81128395}
+  m_LocalPosition: {x: 0.05326076, y: 0.08494788, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4271950866927810}
@@ -453,10 +453,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 37c42c4e7a4c84044bd2bc4db207005c, type: 2}
-  - {fileID: 2100000, guid: 37c42c4e7a4c84044bd2bc4db207005c, type: 2}
-  - {fileID: 2100000, guid: 37c42c4e7a4c84044bd2bc4db207005c, type: 2}
-  - {fileID: 2100000, guid: 37c42c4e7a4c84044bd2bc4db207005c, type: 2}
+  - {fileID: 2100000, guid: d4c75380ffe93714f9921c0ee69e7127, type: 2}
+  - {fileID: 2100000, guid: d4c75380ffe93714f9921c0ee69e7127, type: 2}
+  - {fileID: 2100000, guid: d4c75380ffe93714f9921c0ee69e7127, type: 2}
+  - {fileID: 2100000, guid: d4c75380ffe93714f9921c0ee69e7127, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -635,7 +635,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1385955658178142}
-  m_Mesh: {fileID: 4300000, guid: 39d1d5f9e05f47448a72101d35b7ca58, type: 3}
+  m_Mesh: {fileID: 4300000, guid: a10ead140c67b444b92af7f6ee5fd521, type: 3}
 --- !u!33 &33339102553182542
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1167,10 +1167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81bef31c4b7d36140b5442b2db591753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 35
   ppp: {fileID: 11400000, guid: 06e24385b748cdb45bbc1749a15b286b, type: 2}
-  damageAudio1: {fileID: 82158250907113348}
-  damageAudio2: {fileID: 82424776567162848}
+  damageAudio1: {fileID: 82133363882327204}
+  damageAudio2: {fileID: 82133363882327204}
 --- !u!114 &114471877561056266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   gunShotAudio: {fileID: 82443155629384116}
   cursorAnimator: {fileID: 0}
   Range: 100
-  ShootingDelay: 0.1
+  ShootingDelay: 0.7
 --- !u!114 &114794184482026328
 MonoBehaviour:
   m_ObjectHideFlags: 1
