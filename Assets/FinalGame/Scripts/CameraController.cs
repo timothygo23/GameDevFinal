@@ -7,7 +7,8 @@ public class CameraController : MonoBehaviour {
     [SerializeField] Camera cam;
     // [SerializeField] float keyPanSpeed;
 
-    private const float keyPanSpeed = 200f;
+    private const float keyPanSpeed = 150f;
+    //private const float updownkeyPanSpeed = 100f;
     private const float mouseSensitivity = 100f;
     private const float clampAngle = 80.0f;
 
@@ -40,7 +41,19 @@ public class CameraController : MonoBehaviour {
             transform.Rotate(new Vector3(0, -keyPanSpeed * Time.deltaTime, 0));
         }
 
-         
+        /*
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.Rotate(new Vector3(-updownkeyPanSpeed * Time.deltaTime , 0, 0));
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Rotate(new Vector3(updownkeyPanSpeed * Time.deltaTime, 0, 0));
+        }
+        */
+
+
 
     }
 }
