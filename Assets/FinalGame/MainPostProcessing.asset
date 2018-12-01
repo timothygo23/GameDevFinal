@@ -327,7 +327,7 @@ MonoBehaviour:
       roundness: 1
       mask: {fileID: 0}
       opacity: 1
-      rounded: 0
+      rounded: 1
   dithering:
     m_Enabled: 1
   monitors:

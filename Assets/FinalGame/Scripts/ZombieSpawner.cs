@@ -15,6 +15,7 @@ public class ZombieSpawner : MonoBehaviour {
 
     private float wave = 1;
     private bool isSpawning = false;
+    private PlayerHealth playerHealth;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +24,8 @@ public class ZombieSpawner : MonoBehaviour {
         {
             spawnPoints.Add(sp);
         }
+
+        playerHealth = player.GetComponent<PlayerHealth>();
 
         //starts the spawning
         ToggleSpawnning();
@@ -47,16 +50,23 @@ public class ZombieSpawner : MonoBehaviour {
 
     private void Spawn()
     {
-        int spawnPointIndex = Random.Range(0, spawnPoints.Count);
-        int zombiePrefabIndex = Random.Range(0, zombiePrefabs.Count);
+        if (playerHealth.isAlive())
+        {
+            int spawnPointIndex = Random.Range(0, spawnPoints.Count);
+            int zombiePrefabIndex = Random.Range(0, zombiePrefabs.Count);
 
-        Transform spawnPoint = spawnPoints[spawnPointIndex];
+            Transform spawnPoint = spawnPoints[spawnPointIndex];
 
-        GameObject zombie = Instantiate(zombiePrefabs[zombiePrefabIndex]);
-        Zombie zombieComp = zombie.GetComponent<Zombie>();
+            GameObject zombie = Instantiate(zombiePrefabs[zombiePrefabIndex]);
+            Zombie zombieComp = zombie.GetComponent<Zombie>();
 
-        zombieComp.SetTarget(player);
-        zombie.transform.position = spawnPoint.position;
+            zombieComp.SetTarget(player);
+            zombie.transform.position = spawnPoint.position;
+        }
+        else
+        {
+            CancelInvoke("Spawn");
+        }
     }
 
     private void UpdateSpawnInterval()

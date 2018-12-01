@@ -62,9 +62,10 @@ public class PlayerHealth : MonoBehaviour {
             }
 
             //red tint
-            var vignette = ppp.vignette.settings;
+            /*var vignette = ppp.vignette.settings;
             vignette.intensity += vignetteIncrement;
             ppp.vignette.settings = vignette;
+            */
 
             //camera shake
             EventBroadcaster.Instance.PostEvent(EventNames.FinalGameEvents.ON_ZOMBIE_ATTACK_SHAKE);
@@ -79,5 +80,23 @@ public class PlayerHealth : MonoBehaviour {
     void GameOver()
     {
         Debug.Log("GameOver");
+
+        var dop = ppp.depthOfField.settings;
+        dop.aperture = 0;
+        dop.focusDistance = 0.1f;
+        ppp.depthOfField.settings = dop;
+
+        CameraController cc = GetComponentInChildren<CameraController>();
+        PlayerShootingController psc = GetComponentInChildren<PlayerShootingController>();
+        cc.enabled = false;
+        psc.enabled = false;
+    }
+
+    public bool isAlive()
+    {
+        if (health > 0)
+            return true;
+        else
+            return false;
     }
 }
