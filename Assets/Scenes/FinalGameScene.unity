@@ -539,69 +539,6 @@ Prefab:
       propertyPath: cursorAnimator
       value: 
       objectReference: {fileID: 99173488}
-    - target: {fileID: 108561937555095862, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108561937555095862, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108561937555095862, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108561937555095862, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: m_SpotAngle
-      value: 79
-      objectReference: {fileID: 0}
-    - target: {fileID: 4087936918235758, guid: e2e7f4c2ebe949b42b23bf95315847cc, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.1863
-      objectReference: {fileID: 0}
-    - target: {fileID: 4087936918235758, guid: e2e7f4c2ebe949b42b23bf95315847cc, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471877561056266, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: ScatteringCoef
-      value: 0.853
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471877561056266, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: Noise
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108561937555095862, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: m_Intensity
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471877561056266, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: NoiseIntensity
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471877561056266, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: NoiseScale
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471877561056266, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: NoiseVelocity.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471877561056266, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: NoiseVelocity.y
-      value: -3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2e7f4c2ebe949b42b23bf95315847cc, type: 2}
   m_IsPrefabAsset: 0
@@ -1212,7 +1149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lights: {fileID: 628151811}
-  time: 300
+  time: 90
 --- !u!1 &635154150 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100072, guid: 6e68b3f0d8834de4e8ebb791c6acdc35,
