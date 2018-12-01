@@ -8,6 +8,7 @@ public class PlayerShootingController : MonoBehaviour
 
     [SerializeField] private ParticleSystem onHitParticle;
     [SerializeField] private AudioSource gunShotAudio;
+    [SerializeField] private Animator cursorAnimator;
 
     public float Range = 100;
     public float ShootingDelay = 2.0f;
@@ -49,6 +50,7 @@ public class PlayerShootingController : MonoBehaviour
         EventBroadcaster.Instance.PostEvent(EventNames.FinalGameEvents.ON_GUN_SHOT_SHAKE);
 
         gunShotAudio.Play();
+        cursorAnimator.SetTrigger("Shot");
 
         if (Physics.Raycast(ray, out hit, Range, _shootableMask))
         {
