@@ -1397,10 +1397,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad6daa3eaedbf948a893238d087875b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4427890840321088}
+  player: {fileID: 0}
   agent: {fileID: 195569969949491152}
   animator: {fileID: 95581256082273332}
-  attackInterval: 1.8
+  attackInterval: 2
 --- !u!114 &114903827290672278
 MonoBehaviour:
   m_ObjectHideFlags: 1

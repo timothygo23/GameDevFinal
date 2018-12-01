@@ -1,20 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PostProcessing;
 
 public class PlayerHealth : MonoBehaviour {
 
     private const string ZOMBIE_TAG = "Zombie";
 
     [SerializeField] private int health = 3;
-    
-	void Awake () {
+    [SerializeField] private PostProcessingProfile ppp;
+
+    private float maxHealth;
+    private float vignetteIncrement;
+
+     
+
+    void Awake () {
         EventBroadcaster.Instance.AddObserver(EventNames.FinalGameEvents.ON_ZOMBIE_ATTACK, this.TakeDamage);
-	}
+        maxHealth = health;
+        vignetteIncrement = (float)(1 / maxHealth);
+        //vignetteIncrement = 0.01f;
+    }
 
     void OnDestroy()
     {
         EventBroadcaster.Instance.RemoveObserver(EventNames.FinalGameEvents.ON_ZOMBIE_ATTACK);
+
+        var vignette = ppp.vignette.settings;
+        vignette.intensity = 0.0f;
+        ppp.vignette.settings = vignette;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,7 +44,12 @@ public class PlayerHealth : MonoBehaviour {
     {
         Debug.Log("Player health: " + health);
         health -= 1;
-        if(health <= 0)
+
+        var vignette = ppp.vignette.settings;
+        vignette.intensity += vignetteIncrement;
+        ppp.vignette.settings = vignette;
+
+        if (health <= 0)
         {
             GameOver();
         }
