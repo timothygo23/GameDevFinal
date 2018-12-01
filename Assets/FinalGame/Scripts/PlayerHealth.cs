@@ -10,10 +10,12 @@ public class PlayerHealth : MonoBehaviour {
     [SerializeField] private int health = 3;
     [SerializeField] private PostProcessingProfile ppp;
 
+    [SerializeField] private AudioSource damageAudio1;
+    [SerializeField] private AudioSource damageAudio2;
+    private bool playerDamageAudio1 = true;
+
     private float maxHealth;
     private float vignetteIncrement;
-
-     
 
     void Awake () {
         EventBroadcaster.Instance.AddObserver(EventNames.FinalGameEvents.ON_ZOMBIE_ATTACK, this.TakeDamage);
@@ -44,6 +46,18 @@ public class PlayerHealth : MonoBehaviour {
     {
         Debug.Log("Player health: " + health);
         health -= 1;
+
+        //audio
+        if (playerDamageAudio1)
+        {
+            playerDamageAudio1 = false;
+            damageAudio1.Play();
+        }
+        else
+        {
+            playerDamageAudio1 = true;
+            damageAudio2.Play();
+        }
 
         //red tint
         var vignette = ppp.vignette.settings;

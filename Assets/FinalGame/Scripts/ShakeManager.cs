@@ -20,15 +20,15 @@ public class ShakeManager : MonoBehaviour {
 
     private void GunShotShake ()
     {
-        StartCoroutine(Shake(0.1f, 0.1f));
+        StartCoroutine(ShakePosition(0.1f, 0.085f));
     }
 
     private void ZombieAttackShake()
     {
-
+        StartCoroutine(ShakePosition(0.2f, 0.25f));
     }
 
-    IEnumerator Shake (float duration, float magnitude)
+    IEnumerator ShakePosition (float duration, float magnitude)
     {
         Vector3 originalPosition = transform.localPosition;
 
