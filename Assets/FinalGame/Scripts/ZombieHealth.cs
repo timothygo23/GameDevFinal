@@ -19,7 +19,7 @@ public class ZombieHealth : MonoBehaviour
             isCritter = true;
             _particle = GetComponentInChildren<ParticleSystem>();
         }
-
+   
     }
 
     public void TakeDamage(float damage)
@@ -46,6 +46,9 @@ public class ZombieHealth : MonoBehaviour
         MeshCollider[] meshColliders = gameObject.GetComponents<MeshCollider>();
         foreach (MeshCollider mc in meshColliders) mc.enabled = false;
 
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.mute = !audioSource.mute;
+
         if (isCritter)
         {
             _particle.Play();
@@ -55,6 +58,7 @@ public class ZombieHealth : MonoBehaviour
         }
         else
         {
+            
             _animator.SetTrigger("Death");
         }
 
