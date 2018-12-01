@@ -8,8 +8,12 @@ public class ZombieSpawner : MonoBehaviour {
 
     [SerializeField] private Transform player;
     [SerializeField] private List<GameObject> zombiePrefabs;
-    [SerializeField] private float spawnRate = 3;
+    [SerializeField] private float spawnInterval = 8;
+    [SerializeField] private float waves = 4;
+    [SerializeField] private float spawnIntervalDec = 3;
+    [SerializeField] private float time = 360;
 
+    private float wave = 1;
     private bool isSpawning = false;
 
 	// Use this for initialization
@@ -22,6 +26,8 @@ public class ZombieSpawner : MonoBehaviour {
 
         //starts the spawning
         ToggleSpawnning();
+
+        InvokeRepeating("UpdateSpawnInterval", time / waves, time / waves);
     }
 
     public void ToggleSpawnning()
@@ -30,12 +36,12 @@ public class ZombieSpawner : MonoBehaviour {
         {
             //start the spawning
             isSpawning = true;
-            InvokeRepeating("Spawn", 0, spawnRate);
+            InvokeRepeating("Spawn", 0, spawnInterval);
         }
         else
         {
             isSpawning = false;
-            CancelInvoke();
+            CancelInvoke("Spawn");
         }
     }
 
@@ -53,8 +59,22 @@ public class ZombieSpawner : MonoBehaviour {
         zombie.transform.position = spawnPoint.position;
     }
 
-    public void SetSpawnRate(float spawnRate)
+    private void UpdateSpawnInterval()
     {
-        this.spawnRate = spawnRate;
+        //cancel current spawning
+        ToggleSpawnning();
+
+        if(wave <= 4)
+        {
+            spawnInterval -= spawnIntervalDec;
+            wave++;
+        }
+        else
+        {
+            CancelInvoke("UpdateSpawnInterval");
+        }
+
+        //start spawnning again
+        ToggleSpawnning();
     }
 }

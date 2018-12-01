@@ -1167,7 +1167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81bef31c4b7d36140b5442b2db591753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 25
   ppp: {fileID: 11400000, guid: 06e24385b748cdb45bbc1749a15b286b, type: 2}
   damageAudio1: {fileID: 82158250907113348}
   damageAudio2: {fileID: 82424776567162848}
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   gunShotAudio: {fileID: 82443155629384116}
   cursorAnimator: {fileID: 0}
   Range: 100
-  ShootingDelay: 0.1
+  ShootingDelay: 0.4
 --- !u!114 &114794184482026328
 MonoBehaviour:
   m_ObjectHideFlags: 1

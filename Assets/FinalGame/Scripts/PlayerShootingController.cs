@@ -54,7 +54,7 @@ public class PlayerShootingController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, Range, _shootableMask))
         {
-            print("hit " + hit.collider.gameObject);
+            //print("hit " + hit.collider.gameObject);
 
             onHitParticle.Stop();
 

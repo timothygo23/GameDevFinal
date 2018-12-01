@@ -539,69 +539,6 @@ Prefab:
       propertyPath: cursorAnimator
       value: 
       objectReference: {fileID: 99173488}
-    - target: {fileID: 108561937555095862, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108561937555095862, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108561937555095862, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108561937555095862, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: m_SpotAngle
-      value: 79
-      objectReference: {fileID: 0}
-    - target: {fileID: 4087936918235758, guid: e2e7f4c2ebe949b42b23bf95315847cc, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.1863
-      objectReference: {fileID: 0}
-    - target: {fileID: 4087936918235758, guid: e2e7f4c2ebe949b42b23bf95315847cc, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471877561056266, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: ScatteringCoef
-      value: 0.853
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471877561056266, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: Noise
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108561937555095862, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: m_Intensity
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471877561056266, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: NoiseIntensity
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471877561056266, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: NoiseScale
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471877561056266, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: NoiseVelocity.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471877561056266, guid: e2e7f4c2ebe949b42b23bf95315847cc,
-        type: 2}
-      propertyPath: NoiseVelocity.y
-      value: -3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2e7f4c2ebe949b42b23bf95315847cc, type: 2}
   m_IsPrefabAsset: 0
@@ -12443,7 +12380,10 @@ MonoBehaviour:
   - {fileID: 1761852756930624, guid: fe747595dc06d6b43a9fdf81b9a05faa, type: 2}
   - {fileID: 1818391516876366, guid: 6b4a00a0936ab774c82913ff2b65d9c3, type: 2}
   - {fileID: 1233533643658454, guid: b99ab184a530b9747b83019a2a1f5f0b, type: 2}
-  spawnRate: 5
+  spawnInterval: 10
+  waves: 4
+  spawnIntervalDec: 1.5
+  time: 360
 --- !u!1 &2056464926
 GameObject:
   m_ObjectHideFlags: 0

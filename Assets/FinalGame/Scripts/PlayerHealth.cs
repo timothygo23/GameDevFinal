@@ -44,32 +44,35 @@ public class PlayerHealth : MonoBehaviour {
 
     void TakeDamage()
     {
-        Debug.Log("Player health: " + health);
-        health -= 1;
-
-        //audio
-        if (playerDamageAudio1)
+        //Debug.Log("Player health: " + health);
+        if(health > 0)
         {
-            playerDamageAudio1 = false;
-            damageAudio1.Play();
-        }
-        else
-        {
-            playerDamageAudio1 = true;
-            damageAudio2.Play();
-        }
+            health -= 1;
 
-        //red tint
-        var vignette = ppp.vignette.settings;
-        vignette.intensity += vignetteIncrement;
-        ppp.vignette.settings = vignette;
+            //audio
+            if (playerDamageAudio1)
+            {
+                playerDamageAudio1 = false;
+                damageAudio1.Play();
+            }
+            else
+            {
+                playerDamageAudio1 = true;
+                damageAudio2.Play();
+            }
 
-        //camera shake
-        EventBroadcaster.Instance.PostEvent(EventNames.FinalGameEvents.ON_ZOMBIE_ATTACK_SHAKE);
+            //red tint
+            var vignette = ppp.vignette.settings;
+            vignette.intensity += vignetteIncrement;
+            ppp.vignette.settings = vignette;
 
-        if (health <= 0)
-        {
-            GameOver();
+            //camera shake
+            EventBroadcaster.Instance.PostEvent(EventNames.FinalGameEvents.ON_ZOMBIE_ATTACK_SHAKE);
+
+            if (health <= 0)
+            {
+                GameOver();
+            }
         }
     }
 
