@@ -405,6 +405,11 @@ Transform:
   m_Father: {fileID: 1061604016}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &209823529 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 108561937555095862, guid: e2e7f4c2ebe949b42b23bf95315847cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 383111571}
 --- !u!1 &215964524 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100010, guid: 6e68b3f0d8834de4e8ebb791c6acdc35,
@@ -1149,7 +1154,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lights: {fileID: 628151811}
+  flashlight: {fileID: 209823529}
   time: 90
+  flashlightTriggerTime: 120
+  minWaitTime: 0
+  maxWaitTime: 1
+  flashlightOffTime: 150
 --- !u!1 &635154150 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100072, guid: 6e68b3f0d8834de4e8ebb791c6acdc35,
