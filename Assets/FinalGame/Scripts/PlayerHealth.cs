@@ -107,6 +107,13 @@ public class PlayerHealth : MonoBehaviour {
         Animator playerAnimator = GetComponent<Animator>();
         //playerAnimator.SetTrigger(DEATH_ANIMATION_KEY);
         playerAnimator.Play("PlayerDeath");
+
+        Invoke("GameOverView", 1.5f);
+    }
+
+    public void GameOverView()
+    {
+        EventBroadcaster.Instance.PostEvent(EventNames.FinalGameEvents.ON_PLAYER_DIE);
     }
 
     public bool isAlive()
