@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 33228020563007500}
   - component: {fileID: 23408954780529966}
   - component: {fileID: 82443155629384116}
+  - component: {fileID: 95125188181984748}
   m_Layer: 0
   m_Name: pistol
   m_TagString: Untagged
@@ -255,15 +256,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1385955658178142}
-  m_LocalRotation: {x: -0.54167527, y: 0.45451948, z: 0.45451948, w: 0.54167527}
-  m_LocalPosition: {x: 0.36, y: -0.95, z: 0.24}
-  m_LocalScale: {x: 0.14378001, y: 0.071890004, z: 0.007189}
+  m_LocalRotation: {x: -0.45451948, y: 0.54167527, z: 0.54167527, w: 0.45451948}
+  m_LocalPosition: {x: 0.36, y: -0.95, z: 0}
+  m_LocalScale: {x: 0.1437, y: 0.0718, z: 0.0072}
   m_Children:
   - {fileID: 4351463724458316}
   - {fileID: 4043306063150598}
   m_Father: {fileID: 4446836382203674}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 90, z: -10}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 90, z: 10}
 --- !u!4 &4351463724458316
 Transform:
   m_ObjectHideFlags: 1
@@ -453,10 +454,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 37c42c4e7a4c84044bd2bc4db207005c, type: 2}
-  - {fileID: 2100000, guid: 37c42c4e7a4c84044bd2bc4db207005c, type: 2}
-  - {fileID: 2100000, guid: 37c42c4e7a4c84044bd2bc4db207005c, type: 2}
-  - {fileID: 2100000, guid: 37c42c4e7a4c84044bd2bc4db207005c, type: 2}
+  - {fileID: 2100000, guid: 2243847567dacf440b922656a84d054d, type: 2}
+  - {fileID: 2100000, guid: 2243847567dacf440b922656a84d054d, type: 2}
+  - {fileID: 2100004, guid: 5a5caa5c6c8dac14e8d74c4e7bd875d1, type: 3}
+  - {fileID: 2100006, guid: 5a5caa5c6c8dac14e8d74c4e7bd875d1, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -635,7 +636,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1385955658178142}
-  m_Mesh: {fileID: 4300000, guid: 39d1d5f9e05f47448a72101d35b7ca58, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 5a5caa5c6c8dac14e8d74c4e7bd875d1, type: 3}
 --- !u!33 &33339102553182542
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1078,6 +1079,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &95125188181984748
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1385955658178142}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 5a5caa5c6c8dac14e8d74c4e7bd875d1, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95411745990403410
 Animator:
   serializedVersion: 3
@@ -1108,7 +1127,7 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
   m_Range: 20
-  m_SpotAngle: 79
+  m_SpotAngle: 65
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
