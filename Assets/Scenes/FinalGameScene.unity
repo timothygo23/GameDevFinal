@@ -1160,6 +1160,7 @@ MonoBehaviour:
   minWaitTime: 0
   maxWaitTime: 1
   flashlightOffTime: 150
+  flashlightOnTime: 240
 --- !u!1 &635154150 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100072, guid: 6e68b3f0d8834de4e8ebb791c6acdc35,

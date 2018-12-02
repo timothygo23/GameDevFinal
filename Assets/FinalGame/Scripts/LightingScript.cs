@@ -11,6 +11,7 @@ public class LightingScript : MonoBehaviour {
     [SerializeField] private float minWaitTime;
     [SerializeField] private float maxWaitTime;
     [SerializeField] private float flashlightOffTime;
+    [SerializeField] private float flashlightOnTime;
 
     private float dimRate;
     private float currentTime = 0;
@@ -31,10 +32,13 @@ public class LightingScript : MonoBehaviour {
         if (currentTime >= flashlightTriggerTime && currentTime < flashlightOffTime)
         {
             co = StartCoroutine(Flicker());
-        } else if (currentTime >= flashlightOffTime)
+        } else if (currentTime >= flashlightOffTime && currentTime < flashlightOnTime)
         {
             StopAllCoroutines();
             flashlight.enabled = false;
+        } else if (currentTime >= flashlightOnTime)
+        {
+            flashlight.enabled = true;
         }
     }
 
