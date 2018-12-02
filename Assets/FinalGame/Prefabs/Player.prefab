@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 4271950866927810}
   - component: {fileID: 33228020563007500}
   - component: {fileID: 23408954780529966}
-  - component: {fileID: 95522149545928668}
   - component: {fileID: 82443155629384116}
   m_Layer: 0
   m_Name: pistol
@@ -168,6 +167,7 @@ GameObject:
   - component: {fileID: 82133363882327204}
   - component: {fileID: 82158250907113348}
   - component: {fileID: 82424776567162848}
+  - component: {fileID: 95411745990403410}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -1078,16 +1078,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &95522149545928668
+--- !u!95 &95411745990403410
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1385955658178142}
+  m_GameObject: {fileID: 1495716832543732}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5a5caa5c6c8dac14e8d74c4e7bd875d1, type: 3}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7c17f145a726f2f4eac092ca21af51c4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

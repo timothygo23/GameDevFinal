@@ -17,11 +17,20 @@ public class PlayerHealth : MonoBehaviour {
     private float maxHealth;
     private float vignetteIncrement;
 
+    private float previousAperture;
+    private float previousFocusDistance;
+
+    private const string DEATH_ANIMATION_KEY = "Death";
+
     void Awake () {
         EventBroadcaster.Instance.AddObserver(EventNames.FinalGameEvents.ON_ZOMBIE_ATTACK, this.TakeDamage);
         maxHealth = health;
         vignetteIncrement = (float)(1 / maxHealth);
         //vignetteIncrement = 0.01f;
+
+        var dop = ppp.depthOfField.settings;
+        previousAperture = dop.aperture;
+        previousFocusDistance = dop.focusDistance;
     }
 
     void OnDestroy()
@@ -31,6 +40,11 @@ public class PlayerHealth : MonoBehaviour {
         var vignette = ppp.vignette.settings;
         vignette.intensity = 0.0f;
         ppp.vignette.settings = vignette;
+
+        var dop = ppp.depthOfField.settings;
+        dop.aperture = previousAperture;
+        dop.focusDistance = previousFocusDistance;
+        ppp.depthOfField.settings = dop;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -62,11 +76,10 @@ public class PlayerHealth : MonoBehaviour {
             }
 
             //red tint
-            /*var vignette = ppp.vignette.settings;
+            var vignette = ppp.vignette.settings;
             vignette.intensity += vignetteIncrement;
             ppp.vignette.settings = vignette;
-            */
-
+            
             //camera shake
             EventBroadcaster.Instance.PostEvent(EventNames.FinalGameEvents.ON_ZOMBIE_ATTACK_SHAKE);
 
@@ -90,6 +103,10 @@ public class PlayerHealth : MonoBehaviour {
         PlayerShootingController psc = GetComponentInChildren<PlayerShootingController>();
         cc.enabled = false;
         psc.enabled = false;
+
+        Animator playerAnimator = GetComponent<Animator>();
+        //playerAnimator.SetTrigger(DEATH_ANIMATION_KEY);
+        playerAnimator.Play("PlayerDeath");
     }
 
     public bool isAlive()
