@@ -67,6 +67,9 @@ public class ZombieHealth : MonoBehaviour
 
         Zombie zombieComp = GetComponent<Zombie>();
         zombieComp.EndAttack();
+
+        // to know when Zombie dies
+        EventBroadcaster.Instance.PostEvent(EventNames.FinalGameEvents.ON_ZOMBIE_DIE);
     }
 
 }
