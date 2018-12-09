@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour {
     /*
     [SerializeField] Camera cam;
-
+    */
     private const float keyPanSpeed = 150f;
     private const float updownkeyPanSpeed = 100f;
     private const float mouseSensitivity = 100f;
@@ -16,9 +16,9 @@ public class CameraController : MonoBehaviour {
 
     float camSens = 0.15f; 
     private Vector3 lastMouse = new Vector3(255, 255, 255);
-    */
-    public float speedH = 10.0f;
-    public float speedV = 10.0f;
+    
+    public float speedH = 2.0f;
+    public float speedV = 2.0f;
 
     private float yaw = 0.0f;
     private float pitch = 0.0f;
@@ -43,7 +43,7 @@ public class CameraController : MonoBehaviour {
         //transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0) * Time.deltaTime * speed);
 
         // key input
-        /*
+        
         if (Input.GetKey(KeyCode.D))
         {
             transform.Rotate(new Vector3(0, keyPanSpeed * Time.deltaTime, 0));
@@ -62,7 +62,7 @@ public class CameraController : MonoBehaviour {
         {
             transform.Rotate(new Vector3(updownkeyPanSpeed * Time.deltaTime, 0, 0));
         }
-        */
+        
 
         yaw += speedH * Input.GetAxis("Mouse X");
         pitch -= speedV * Input.GetAxis("Mouse Y");

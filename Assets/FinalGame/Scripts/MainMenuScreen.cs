@@ -16,9 +16,8 @@ public class MainMenuScreen : View {
 
     public void OnStartClicked()
     {
-        Debug.Log("Start Clicked!");
-        LoadManager.Instance.LoadScene("FinalGameScene");
+        this.Hide();
+        View view = ViewHandler.Instance.Show(ViewNames.LOADING_SCREEN);
     }
-
-
+    
 }

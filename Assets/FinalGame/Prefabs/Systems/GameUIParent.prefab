@@ -148,7 +148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1398154780335822
 GameObject:
   m_ObjectHideFlags: 1
@@ -317,7 +317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1731438922586706
 GameObject:
   m_ObjectHideFlags: 1
@@ -347,6 +347,23 @@ GameObject:
   - component: {fileID: 222778440201208134}
   - component: {fileID: 114778241513740572}
   - component: {fileID: 328207955221307842}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1840008053150776
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224448796875013564}
+  - component: {fileID: 222288516688235856}
+  - component: {fileID: 114964517992247732}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -389,7 +406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1870564371325916
 GameObject:
   m_ObjectHideFlags: 1
@@ -515,7 +532,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -1141,7 +1158,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 8400000, guid: 2704b982152feac4f8ce68d512f1c40d, type: 2}
+  m_Texture: {fileID: 8400000, guid: 1ee0b32308157b64c9ac689f743e8450, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1415,6 +1432,32 @@ MonoBehaviour:
   m_Text: 'CODE Z
 
 '
+--- !u!114 &114964517992247732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1840008053150776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 2800000, guid: 6ecb1f2cec3f17143aaeb57994241c9b, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!124 &124164350849156728
 Behaviour:
   m_ObjectHideFlags: 1
@@ -1449,6 +1492,13 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1439305269687930}
+  m_CullTransparentMesh: 0
+--- !u!222 &222288516688235856
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1840008053150776}
   m_CullTransparentMesh: 0
 --- !u!222 &222332580981834404
 CanvasRenderer:
@@ -1746,6 +1796,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224448796875013564
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1840008053150776}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.4248384, y: 0.4248384, z: 0.4248384}
+  m_Children: []
+  m_Father: {fileID: 224498340920562170}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 64}
+  m_SizeDelta: {x: 1024, y: 512}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224471011732063972
 RectTransform:
   m_ObjectHideFlags: 1
@@ -1777,6 +1845,7 @@ RectTransform:
   - {fileID: 224072946841027026}
   - {fileID: 224279779533745670}
   - {fileID: 224529259366432450}
+  - {fileID: 224448796875013564}
   m_Father: {fileID: 224208067421665104}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1962,7 +2031,7 @@ VideoPlayer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1784036423327198}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 831d50ce40b73bb48af2920cb633ae01, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 265926d944e2fd744854c8b75b2ca1cb, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1985,6 +2054,6 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0

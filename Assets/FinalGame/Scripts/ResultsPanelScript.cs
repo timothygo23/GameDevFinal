@@ -12,11 +12,12 @@ public class ResultsPanelScript : View {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+    }
 
     public void SetData(float time, int kills)
     {
+        Cursor.visible = true;
+
         this.time = time;
         this.kills = kills;
 
@@ -35,6 +36,12 @@ public class ResultsPanelScript : View {
 
     public void OnRestart()
     {
+        Cursor.visible = false;
         LoadManager.Instance.LoadScene("FinalGameScene");
+    }
+
+    public void OnMenu()
+    {
+        LoadManager.Instance.LoadScene("Menu");
     }
 }

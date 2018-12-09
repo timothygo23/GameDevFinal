@@ -1174,7 +1174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96b4a41d3fa83d42b6203fa95ed7848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  speedH: 2
+  speedV: 2
 --- !u!114 &114372035864146162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1186,7 +1187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81bef31c4b7d36140b5442b2db591753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 25
+  health: 10
   ppp: {fileID: 11400000, guid: 06e24385b748cdb45bbc1749a15b286b, type: 2}
   damageAudio1: {fileID: 82158250907113348}
   damageAudio2: {fileID: 82424776567162848}
@@ -1228,7 +1229,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitParticle: {fileID: 198812767269405562}
   gunShotAudio: {fileID: 82443155629384116}
-  cursorAnimator: {fileID: 0}
   Range: 100
   ShootingDelay: 0.4
 --- !u!114 &114794184482026328

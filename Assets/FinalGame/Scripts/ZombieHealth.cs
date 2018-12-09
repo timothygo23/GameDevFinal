@@ -58,7 +58,7 @@ public class ZombieHealth : MonoBehaviour
         }
         else
         {
-            
+
             _animator.SetTrigger("Death");
         }
 
@@ -70,6 +70,7 @@ public class ZombieHealth : MonoBehaviour
 
         // to know when Zombie dies
         EventBroadcaster.Instance.PostEvent(EventNames.FinalGameEvents.ON_ZOMBIE_DIE);
-    }
 
+        Destroy(this.gameObject, 5f);
+    }
 }

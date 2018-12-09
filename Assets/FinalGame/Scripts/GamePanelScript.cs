@@ -64,12 +64,10 @@ public class GamePanelScript : View {
     {
         isAlive = false;
 
-        this.gameObject.SetActive(false);
-
-        Cursor.visible = false;
-
         View resultView = ViewHandler.Instance.Show(ViewNames.RESULT_SCREEN);
         ResultsPanelScript rps = resultView.GetComponent<ResultsPanelScript>();
         rps.SetData(currentTime, killsValue);
+
+        this.gameObject.SetActive(false);
     }
 }
